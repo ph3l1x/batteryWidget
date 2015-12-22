@@ -1,5 +1,6 @@
        var battery = navigator.battery || navigator.mozBattery || navigator.webkitBattery;
 
+
         window.addEventListener('load', function (e) {
             document.querySelector('.battery-text').textContent = battery.level;
         }, false);
