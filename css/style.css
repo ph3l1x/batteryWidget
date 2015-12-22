@@ -1,24 +1,61 @@
 * {
     font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
 }
+html {
+	height:100%;
+	width:100%;
+}
 
 body {
     margin: 0px auto;
-    background-color:#222;
+    background-color:#000;
+    height:100%;
+    width:100%;
 }
-
-.contents {
-	display: flex;
-	display: -webkit-flex;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	height:320px;
+.container {
+	height:100%;
 }
-
-
-.content_text {
+.container-inner {
 	margin:0 auto;
-	font-weight:bold;
-	font-size:12px;
-	color:#fff;
+	width:198px;
+	height:156px;
+	position:relative;
+	top:50%;
+	transform:translateY(-50%);
+}
+.battery-container-inner {
+	position:relative;
+}
+
+.battery {
+	background:url('../images/battery_small.png');
+	background-size:198px 156px;
+	width:198px;
+	height:156px;
+	position:absolute;
+	z-index:20;
+	top:0;
+}
+img.battery-image {
+	position:absolute;
+	z-index:0;
+	top:0;	
+}
+img.battery-image-left {
+	left:8px;
+}
+img.battery-image-center {
+	left:18px;
+	height: 156px;
+}
+img.battery-image-right {
+	height: 154px;
+}
+.battery-text {
+	color:#ffffff;
+	font-family:Arial;
+	font-size:37px;
+	text-align:center;
+	position:relative;
+	top:117px;
 }
