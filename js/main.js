@@ -12,27 +12,15 @@
             var centerImage = document.querySelector('.battery-image-center');
         	
    
-            
-            if(batLevel > 70) {
-                centerImage.style.width = batLevel * 1.52 + 'px';
-                rightImage.style.left = batLevel * 1.52 + 18 + 'px';
-            } else if(batLevel > 50)  {
-            	centerImage.style.width = batLevel * 1.75 + 5 + 'px';
-                rightImage.style.left = batLevel * 1.75 + 23 + 'px';
-            } else {
-            	centerImage.style.width = batLevel * 1.75 + 'px';
-                rightImage.style.left = batLevel * 1.75 + 18 + 'px';	
-            }
-            
+            centerImage.style.width = 152 * (batLevel/100) + 'px';
+            rightImage.style.left = 152 * (batLevel/100) + 18 + 'px';
+       
             if (batLevel < 3) {
-            	leftImage.style.left = '18px';
             	rightImage.style.display = 'none';
             	centerImage.style.display = 'none';
             } else {
-            	leftImage.style.display = "block";
             	rightImage.style.display = "block";
             	centerImage.style.display = "block";
             }
             textSelector.textContent = batLevel + '%';// 50%
-        	console.log(batLevel);
         }, false);
